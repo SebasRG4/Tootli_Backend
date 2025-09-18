@@ -1,0 +1,28 @@
+[90m= [39m[34;4mIlluminate\Http\JsonResponse[39;24m {#8072
+    +[1mheaders[22m: [34;4mSymfony\Component\HttpFoundation\ResponseHeaderBag[39;24m {#8076},
+    +[1moriginal[22m: [
+      "[34mtoken_info[39m" => [
+        "[34mtoken[39m" => "[32m35SFLg.GHYIaoOCg66x4r8tMoomTGwJXelrdaXk4R-rh7BO_V35Hhgq6EYxbLpOn-iXtYaa3LplHzTxRKFqg7AGWPKvfhMAUsP-GDDuwADzFyGQ_SsMw0C9ofAfkNmM87xEXPYepaUykKkK_GA1N1cQt1Ss9_xCQYRLXQmZdSz04kQPH7tz1JqQbdxMsDvs7of92ZVyJ[39m",
+        "[34mexpires[39m" => [35m1752771201353[39m,
+        "[34mclientId[39m" => "[32m2[39m",
+        "[34mchannel_example[39m" => "[32mpublic:ubicacion-repartidor-2[39m",
+        "[34mdebug_info[39m" => [
+          "[34mdriver_id_type[39m" => "[32mstring[39m",
+          "[34mdriver_id_value[39m" => "[32m2[39m",
+        ],
+      ],
+      "[34mpublish_result[39m" => [
+        "[34msuccess[39m" => [36mtrue[39m,
+        "[34mhttp_code[39m" => [35m201[39m,
+        "[34mresponse[39m" => """
+          [32m{[39m\n
+          \t[32m"channel": "public:ubicacion-repartidor-2",[39m\n
+          \t[32m"messageId": "AxjliSEa8N:4436"[39m\n
+          [32m}[39m\n
+          """,
+        "[34merror[39m" => [36mnull[39m,
+      ],
+    ],
+    +[1mexception[22m: [36mnull[39m,
+  }
+
