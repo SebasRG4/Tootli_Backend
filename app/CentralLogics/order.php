@@ -110,8 +110,10 @@ class OrderLogic
             if($order->store_discount_amount > 0  && $order->discount_on_product_by == 'vendor')
             {
                 if($store->store_business_model == 'subscription' && isset($store_sub)){
-                    $store_d_amount=  $order->store_discount_amount;
+                    $amount_admin = $comission?($order->store_discount_amount/ 100) * $comission:0;
+                    $store_d_amount=  $order->store_discount_amount- $amount_admin;
                     Helpers::expenseCreate(amount:$store_d_amount,type:'discount_on_product',datetime:now(),created_by:'vendor',order_id:$order->id,store_id:$order->store->id);
+                    Helpers::expenseCreate(amount:$amount_admin,type:'discount_on_product',datetime:now(),created_by:'admin',order_id:$order->id);
                 }
                 else{
                     $amount_admin = $comission?($order->store_discount_amount/ 100) * $comission:0;
@@ -167,9 +169,9 @@ class OrderLogic
 
             //final comission
             if($store->store_business_model == 'subscription' && isset($store_sub)){
-                $comission_on_store_amount =0;
+                $comission_on_store_amount = ($comission?($order_amount/ 100) * $comission:0);
                 $subscription_mode= 1;
-                $commission_percentage= 0;
+                $commission_percentage= $comission;
             } else{
                 $comission_on_store_amount = ($comission?($order_amount/ 100) * $comission:0);
                 $subscription_mode= 0;
